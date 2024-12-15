@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
     paddingHorizontal: 20,
-    paddingTop: 120, 
+    paddingTop: 20, 
     paddingBottom: 40,
   },
   sectionContainer: {

@@ -13,10 +13,13 @@ To run your project, navigate to the directory and run one of the following npm 
 DEPENDENCIAS
 
   "dependencies": {
-    "expo": "~52.0.17",
+    "@react-navigation/drawer": "^7.0.19",
+    "@react-navigation/native": "^7.0.13",
+    "expo": "~52.0.18",
     "expo-status-bar": "~2.0.0",
+    "lucide-react-native": "^0.468.0",
     "react": "18.3.1",
-    "react-native": "0.76.3"
+    "react-native": "0.76.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
