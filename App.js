@@ -4,7 +4,7 @@ import DrawerNavigator from "./src/navigators/DrawerNavigator";
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer testID="navigation-container">
       <DrawerNavigator />
     </NavigationContainer>
   );

@@ -9,9 +9,21 @@ const Drawer = createDrawerNavigator();
 const DrawerNavigator = () => {
   return (
     <Drawer.Navigator screenOptions={{ headerShown: false }}>
-      <Drawer.Screen name="Home" component={HomeScreen} />
-      <Drawer.Screen name="Perfil" component={ProfileScreen} />
-      <Drawer.Screen name="About" component={AboutScreen} />
+      <Drawer.Screen 
+        name="Home" 
+        component={HomeScreen} 
+        options={{ testID: "home-screen" }} 
+      />
+      <Drawer.Screen 
+        name="Perfil" 
+        component={ProfileScreen} 
+        options={{ testID: "profile-screen" }} 
+      />
+      <Drawer.Screen 
+        name="About" 
+        component={AboutScreen} 
+        options={{ testID: "about-screen" }} 
+      />
     </Drawer.Navigator>
   );
 };

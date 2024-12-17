@@ -4,9 +4,9 @@ import Header from "../../components/header/header";
 
 const HomeScreen = () => {
   return (
-    <View style={styles.screen}>
-      <Header />
-      <Text style={styles.content}>Bem-vindo à Home!</Text>
+    <View style={styles.screen} testID="home-screen">
+      <Header testID="header-home"/>
+      <Text style={styles.content} testID="home-welcome-text">Bem-vindo à Home!</Text>
     </View>
   );
 };

@@ -24,26 +24,26 @@ const ProfileScreen = () => {
 
   return (
     <SafeAreaView style={styles.screen}>
-      <Header />
+      <Header testID="header-profile" />
       <ScrollView 
         contentContainerStyle={styles.scrollContainer}
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.container}>
-          <View style={styles.profileCard}>
+          <View style={styles.profileCard} testID="profile-card">
             {/* Perfil do Usuário */}
-            <View style={styles.profileHeader}>
+            <View style={styles.profileHeader} testID="profile-header">
               <View style={styles.avatarContainer}>
                 <User size={48} color="#22C55E" />
               </View>
               <View>
-                <Text style={styles.profileName}>{user.name}</Text>
-                <Text style={styles.profileEmail}>{user.email}</Text>
+                <Text style={styles.profileName} testID="profile-name">{user.name}</Text>
+                <Text style={styles.profileEmail} testID="profile-email">{user.email}</Text>
               </View>
             </View>
 
             {/* Estatísticas Principais */}
-            <View style={styles.statsContainer}>
+            <View style={styles.statsContainer} testID="stats-container">
               <View style={styles.statCard}>
                 <Star size={32} color="#F59E0B" />
                 <Text style={styles.statValue}>{user.points}</Text>
@@ -52,10 +52,11 @@ const ProfileScreen = () => {
             </View>
 
             {/* Opções de Perfil */}
-            <View style={styles.optionsContainer}>
+            <View style={styles.optionsContainer} testID="options-container">
               <TouchableOpacity 
                 style={styles.optionButton}
                 onPress={toggleQRCodeModal}
+                testID="qr-code-button"
               >
                 <QrCodeIcon size={24} color="#22C55E" />
                 <Text style={styles.optionButtonText}>QR Code</Text>
@@ -63,6 +64,7 @@ const ProfileScreen = () => {
               <TouchableOpacity 
                 style={styles.optionButton}
                 onPress={handleEditProfile}
+                testID="edit-profile-button"
               >
                 <User size={24} color="#22C55E" />
                 <Text style={styles.optionButtonText}>Editar Perfil</Text>
@@ -78,12 +80,14 @@ const ProfileScreen = () => {
         transparent={true}
         visible={qrCodeModalVisible}
         onRequestClose={toggleQRCodeModal}
+        testID="qr-code-modal"
       >
         <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
+          <View style={styles.modalContent} testID="modal-content">
             <TouchableOpacity 
               style={styles.closeButton} 
               onPress={toggleQRCodeModal}
+              testID="close-modal-button"
             >
               <Text style={styles.closeButtonText}>Fechar</Text>
             </TouchableOpacity>
@@ -91,6 +95,7 @@ const ProfileScreen = () => {
               source={require('../../../assets/example-qrcode.png')}
               style={styles.qrCodeImage}
               resizeMode="contain"
+              testID="qr-code-image"
             />
           </View>
         </View>
