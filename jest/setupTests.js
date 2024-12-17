@@ -1,4 +1,5 @@
 import 'react-native-gesture-handler/jestSetup';
+import "@testing-library/jest-native/extend-expect";
 
 jest.mock('react-native-gesture-handler', () => ({
   Swipeable: () => null,
@@ -14,10 +15,11 @@ jest.mock('@react-navigation/native', () => {
   return {
     ...actualNav,
     NavigationContainer: (props) => <div {...props} />,
-    useNavigation: jest.fn(() => ({
+    useNavigation: jest.fn().mockReturnValue({
       navigate: jest.fn(),
       goBack: jest.fn(),
-    })),
+      openDrawer: jest.fn(), 
+    }),
   };
 });
 
@@ -32,4 +34,5 @@ jest.mock('@react-navigation/drawer', () => ({
       <div testID={options?.testID || "screen"} {...props} />
     ),
   })),
+
 }));

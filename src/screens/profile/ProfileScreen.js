@@ -15,7 +15,7 @@ const ProfileScreen = () => {
   const [qrCodeModalVisible, setQrCodeModalVisible] = useState(false);
 
   const handleEditProfile = () => {
-    navigation.navigate('EditProfile');
+    navigation.navigate('EditProfileScreen');
   };
 
   const toggleQRCodeModal = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, Text, View, ScrollView, Linking } from "react-native";
 import Header from "../../components/header/header";
 
 const AboutScreen = () => {
