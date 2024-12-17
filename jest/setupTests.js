@@ -33,6 +33,12 @@ jest.mock('@react-navigation/drawer', () => ({
     Screen: ({ options, ...props }) => (
       <div testID={options?.testID || "screen"} {...props} />
     ),
-  })),
-
+  })), 
 }));
+
+// Mock useColorScheme to test both light and dark themes
+jest.mock('react-native', () => {
+  const RN = jest.requireActual('react-native');
+  RN.useColorScheme = jest.fn();
+  return RN;
+});
