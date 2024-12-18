@@ -4,7 +4,8 @@ import HomeScreen from "../screens/home/HomeScreen";
 import AboutScreen from "../screens/about/AboutScreen";
 import ProfileScreen from "../screens/profile/ProfileScreen";
 import EditProfileScreen from "../screens/profile/edit-profile/EditProfileScreen";
-import HistoryScreen from "../screens/history/historyScreen";
+import HistoryScreen from "../screens/history/HistoryScreen";
+import BenefitsScreen from "../screens/benefits/BenefitsScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -25,6 +26,11 @@ const DrawerNavigator = () => {
         name="Editar Perfil" 
         component={EditProfileScreen} 
         options={{ testID: "edit-profile-screen" }} 
+      />
+      <Drawer.Screen 
+        name="Beneficios" 
+        component={BenefitsScreen} 
+        options={{ testID: "benefits-screen" }} 
       />
       <Drawer.Screen 
         name="Histórico" 

@@ -1,4 +1,4 @@
-Projeto de um appMobile em react native com expo - em andamento -
+Projeto de um appMobile em react native com expo de uma plataforma de troca de resíduos eletrônicos por pontos que podem ser trocados por recompensas - em andamento -
 
 ✅ Your project is ready!
 
