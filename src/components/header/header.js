@@ -1,12 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity, StatusBar } from "react-native";
+import { StyleSheet, View, TouchableOpacity, StatusBar } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import Logo from "../../../assets/logo.svg";
 
-const Header = ({ testID }) => {  // Adicione a prop testID
+const Header = ({ testID }) => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.header} testID={testID}>  {/* Aplicando testID no View */}
+    <View style={styles.header} testID={testID}>
       <StatusBar backgroundColor="green" barStyle="light-content" />
       
       {/* Ícone de menu hambúrguer */}
@@ -18,7 +19,8 @@ const Header = ({ testID }) => {  // Adicione a prop testID
         </View>
       </TouchableOpacity>
 
-      <Text style={styles.title}>Meu App</Text>
+      {/* Logo do projeto */}
+      <Logo style={styles.logo} />
     </View>
   );
 };
@@ -32,16 +34,15 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     backgroundColor: "green",
     width: "100%",
-    elevation: 4, // Sombra no Android
-    shadowColor: '#000', // Sombra no iOS
+    elevation: 4, 
+    shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
   },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "white",
+  logo: {
+    width: 40,
+    height: 40, // Ajuste de tamanho do logo
   },
   hamburgerMenu: {
     flexDirection: "column",

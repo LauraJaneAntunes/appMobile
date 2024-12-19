@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity, ScrollView, Modal, Image, Saf
 import { User, Star, QrCodeIcon } from 'lucide-react-native';
 import Header from "../../components/header/header";
 import { useNavigation } from '@react-navigation/native';
+import images from "../../assets";
 
 const ProfileScreen = () => {
   const navigation = useNavigation();
@@ -92,7 +93,7 @@ const ProfileScreen = () => {
               <Text style={styles.closeButtonText}>Fechar</Text>
             </TouchableOpacity>
             <Image
-              source={require('../../../assets/example-qrcode.png')}
+              source={images.exampleQRCode}
               style={styles.qrCodeImage}
               resizeMode="contain"
               testID="qr-code-image"
